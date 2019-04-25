@@ -1,0 +1,138 @@
+student@T40:~$ mkdir mca
+student@T40:~$ cat a1
+cat: a1: No such file or directory
+student@T40:~$ cat > a1
+haii sruthiiiii...
+^C
+student@T40:~$ cat >a2
+12344
+^C
+student@T40:~$ cd mca
+student@T40:~/mca$ cat > a1
+haii sruthyyy..
+^C
+student@T40:~/mca$ cd >a2
+student@T40:~$ cd mca
+student@T40:~/mca$ cat > a2
+1234455
+^C
+student@T40:~/mca$ cd ..
+student@T40:~$ mca ls
+
+Command 'mca' not found, did you mean:
+
+  command 'ica' from deb italc-client
+  command 'mcv' from deb scotch
+  command 'mcp' from deb mmv
+  command 'mcat' from deb mtools
+  command 'mco' from deb mcollective-client
+  command 'mcd' from deb mtools
+  command 'm-a' from deb module-assistant
+  command 'mcl' from deb mcl
+  command 'mcs' from deb mono-mcs
+  command 'mma' from deb mma
+  command 'mc' from deb mc
+  command 'mcx' from deb mcl
+  command 'xca' from deb xca
+  command 'pca' from deb eigensoft
+
+Try: apt install <deb name>
+
+student@T40:~$ cd mca
+student@T40:~/mca$ ls
+a1  a2
+student@T40:~/mca$ cat >a3
+45666
+^C
+student@T40:~/mca$ ls
+a1  a2  a3
+student@T40:~/mca$ cp a1 a2
+student@T40:~/mca$ ls
+a1  a2  a3
+student@T40:~/mca$  cat a1
+haii sruthyyy..
+student@T40:~/mca$ cat a2
+haii sruthyyy..
+student@T40:~/mca$ ls
+a1  a2  a3
+student@T40:~/mca$ cat > new
+^C
+student@T40:~/mca$ cp a1 a3 new
+cp: target 'new' is not a directory
+student@T40:~/mca$ cp a1 a3 new1
+cp: target 'new1' is not a directory
+student@T40:~/mca$ mkdir rmca
+student@T40:~/mca$ ls
+a1  a2  a3  new  rmca
+student@T40:~/mca$ cp a1 a3 rmca
+student@T40:~/mca$ cat rmca
+cat: rmca: Is a directory
+student@T40:~/mca$ cd rmca
+student@T40:~/mca/rmca$ ls
+a1  a3
+student@T40:~/mca/rmca$ cd ..
+student@T40:~/mca$ cd ..
+student@T40:~$ cp -R mca rmca
+student@T40:~$ ls
+Desktop    Downloads         mca    Pictures  rmca       Videos
+Documents  examples.desktop  Music  Public    Templates
+student@T40:~$ cd rmca
+student@T40:~/rmca$ cd ..
+student@T40:~/.local/share/Trash/files$ cd ~
+student@T40:~$ cd rmca
+bash: cd: rmca: No such file or directory
+student@T40:~$ cd mca
+student@T40:~/mca$ mkdir lmca
+student@T40:~/mca$ ls
+a1  a2  a3  lmca  new  rmca
+student@T40:~/mca$ cp -R rmca lmca
+student@T40:~/mca$ ls
+a1  a2  a3  lmca  new  rmca
+student@T40:~/mca$ cd lmca
+student@T40:~/mca/lmca$ ls
+rmca
+student@T40:~/mca/lmca$ cd rmca
+student@T40:~/mca/lmca/rmca$ ls
+a1  a3
+student@T40:~/mca/lmca/rmca$ cd ..
+student@T40:~/mca/lmca$ cd..
+cd..: command not found
+student@T40:~/mca/lmca$ cd ..
+student@T40:~/mca$ cp -i a1 a3
+cp: overwrite 'a3'? n
+student@T40:~/mca$ ls
+a1  a2  a3  lmca  new  rmca
+student@T40:~/mca$ cat a2
+haii sruthyyy..
+student@T40:~/mca$ cat a1
+haii sruthyyy..
+student@T40:~/mca$ cat a3
+45666
+student@T40:~/mca$ cp -b a3 a1
+student@T40:~/mca$ ls
+a1  a1~  a2  a3  lmca  new  rmca
+student@T40:~/mca$ ls a2
+a2
+student@T40:~/mca$ cat a1
+45666
+student@T40:~/mca$ cat a2
+haii sruthyyy..
+student@T40:~/mca$ cat a3
+45666
+student@T40:~/mca$ cp -f a2 a1  
+student@T40:~/mca$  cp -r  a3 a2
+student@T40:~/mca$ ls
+a1  a1~  a2  a3  lmca  new  rmca
+student@T40:~/mca$  cat a2
+45666
+student@T40:~/mca$ 
+student@T40:~/mca$ cp -v a1 a2
+'a1' -> 'a2'
+student@T40:~/mca$ cp -r a1 new
+student@T40:~/mca$ cat new
+haii sruthyyy..
+student@T40:~/mca$ cp -r a1 neww
+student@T40:~/mca$ cat neww
+haii sruthyyy..
+student@T40:~/mca$ 
+

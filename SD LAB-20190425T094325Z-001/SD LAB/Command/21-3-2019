@@ -1,0 +1,92 @@
+student@T40:~$ vi shul.sh
+student@T40:~$ chmod +x shul.sh
+student@T40:~$ ./shul.sh
+\hello
+student@T40:~$ gedit sruuu.sh
+student@T40:~$ chmod +x sruuu.sh
+student@T40:~$ ./sruuu.sh
+welcome
+student@T40:~$ gedit first.sh
+student@T40:~$ chmod +x first.sh
+student@T40:~$ ./first.sh
+hello world!
+the date today is Thu Mar 21 14:30:57 IST 2019
+the current directory is /home/student
+student@T40:~$ gedit second.sh
+student@T40:~$ chmod +x second.sh
+student@T40:~$ ./second.sh
+value of var is test string
+student@T40:~$ gedit third.sh
+student@T40:~$ chmod +x third.sh
+student@T40:~$ ./
+bash: ./: Is a directory
+student@T40:~$ ./third.sh
+value of var is $var
+student@T40:~$ gedit new.sh
+student@T40:~$ chmod +x new.sh
+student@T40:~$ ./new.sh
+./new.sh: line 1: echoThe command is ./new.sh: No such file or directory
+The first argument is 
+The second argument is 
+The third argument is 
+The fourth argument is 
+student@T40:~$ ./new.sh a b c d
+./new.sh: line 1: echoThe command is ./new.sh: No such file or directory
+The first argument is a
+The second argument is b
+The third argument is c
+The fourth argument is d
+student@T40:~$ gedit fourth.sh
+student@T40:~$ chmod +x new.sh
+student@T40:~$ ./new.sh
+./new.sh: line 1: echoThe command is ./new.sh: No such file or directory
+The first argument is 
+The second argument is 
+The third argument is 
+The fourth argument is 
+the command is 0
+the command is 
+the command is 
+student@T40:~$ ./new.sh a b c d
+./new.sh: line 1: echoThe command is ./new.sh: No such file or directory
+The first argument is a
+The second argument is b
+The third argument is c
+The fourth argument is d
+the command is 4
+the command is a b c d
+the command is a b c d
+student@T40:~$ gedit oprtr.sh
+student@T40:~$ chmod +x oprtr.sh
+student@T40:~$ ./ oprtr.sh
+bash: ./: Is a directory
+student@T40:~$ ./oprtr.sh
+x
+student@T40:~$ ./oprtr.sh
+
+student@T40:~$ gedit prgm1.sh
+student@T40:~$ chmod +x prgm1.sh
+student@T40:~$ ./prgm1.sh
+5+10=15
+student@T40:~$ gedit prgrm2.sh
+student@T40:~$ chmod +x prgm2.sh
+chmod: cannot access 'prgm2.sh': No such file or directory
+student@T40:~$ chmod +x prgrm2.sh
+student@T40:~$ ./prgrm2.sh
+enter two numbers:x 5 6
+./prgrm2.sh: line 2: 5 6: syntax error in expression (error token is "6")
++5 6=
+student@T40:~$ gedit prgrm2.sh
+^C      
+student@T40:~$ chmod +x prgrm2.sh
+student@T40:~$ ./prgrm2.sh
+enter two numbers:7 8
+7+8=15
+student@T40:~$ gedit prgrm3.sh
+student@T40:~$ chmod +x prgrm3.sh
+student@T40:~$ ./prgrm3.sh
+sum is 10+20
+student@T40:~$ gedit prgrm3.sh
+^C                  
+student@T40:~$ 
+

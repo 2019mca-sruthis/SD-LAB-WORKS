@@ -1,0 +1,50 @@
+student@T40:~$ echo sruthi
+sruthi
+student@T40:~$ read a
+8
+student@T40:~$ echo $a
+8
+student@T40:~$ echo a
+a
+student@T40:~$ man echo
+student@T40:~$ man echo
+student@T40:~$ 
+student@T40:~$ echo -e "sruthi\ns\npillai"
+sruthi
+s
+pillai
+student@T40:~$ echo -E "sruthi\ns\npillai"
+sruthi\ns\npillai
+student@T40:~$ echo -e "sruthi\bs\bpillai"
+sruthpillai
+student@T40:~$ man read
+student@T40:~$ read enter a number
+2
+student@T40:~$ read name
+sruthi
+student@T40:~$ echo "hello my name is $name"
+hello my name is sruthi
+student@T40:~$ man man
+student@T40:~$ echo -e "sruthi \ts\tpillai"
+sruthi 	s	pillai
+student@T40:~$ read a b
+4 5
+student@T40:~$ echo $a $b
+4 5
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

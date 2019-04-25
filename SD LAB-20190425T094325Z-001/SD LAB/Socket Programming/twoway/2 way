@@ -1,0 +1,12 @@
+
+2WAY COMUNICATION
+ 
+student@S16:~/twoway$ javac client.java
+student@S16:~/twoway$ java client
+Client connected to the server
+to Start the chat, type message and press Enter key
+hiiii
+server:>hlooo how are you
+fineeee
+
+

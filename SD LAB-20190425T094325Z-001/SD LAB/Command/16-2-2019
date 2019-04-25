@@ -1,0 +1,139 @@
+student@T40:~$ cd mcvc
+student@T40:~/mcvc$ cat >file4.txt
+1  
+2
+3
+4
+5
+6
+7
+8
+9
+10
+^C
+student@T40:~/mcvc$ cat >file5.txt
+gdfshd
+hdhf
+cdfd
+^C
+student@T40:~/mcvc$ wc file4.txt
+10 10 21 file4.txt
+student@T40:~/mcvc$ wc -l file4.txt
+10 file4.txt
+student@T40:~/mcvc$ wc -c
+
+^C
+student@T40:~/mcvc$ wc -c file4.txt
+21 file4.txt
+student@T40:~/mcvc$ wc -m file4.txt
+21 file4.txt
+student@T40:~/mcvc$ wc -L file4.txt
+2 file4.txt
+student@T40:~/mcvc$ touch A1.txt
+student@T40:~/mcvc$ cat A1.txt
+student@T40:~/mcvc$ cat > A1.txt 
+asdffgh
+welcome
+dfgghfrh
+ghhehe
+dfsfwyhrhr
+^C
+student@T40:~/mcvc$ wc A1.txt
+ 5  5 43 A1.txt
+student@T40:~/mcvc$ wc -l A1.txt
+5 A1.txt
+student@T40:~/mcvc$ wc -L A1.txt
+10 A1.txt
+student@T40:~/mcvc$ wc -c A1.txt
+43 A1.txt
+student@T40:~/mcvc$ wc -c A1.txt
+43 A1.txt
+student@T40:~/mcvc$ cat A1.txt
+asdffgh
+welcome
+dfgghfrh
+ghhehe
+dfsfwyhrhr
+student@T40:~/mcvc$ cat -n A1.txt
+     1	asdffgh
+     2	welcome
+     3	dfgghfrh
+     4	ghhehe
+     5	dfsfwyhrhr
+student@T40:~/mcvc$ wc -w A1.txt
+5 A1.txt
+student@T40:~/mcvc$ cat >a2.txt
+assfgt dsdsj shdfuk
+
+fshk
+^C
+student@T40:~/mcvc$ wc -w a2.txt
+4 a2.txt
+student@T40:~/mcvc$ wc -l a2.txt
+3 a2.txt
+student@T40:~/mcvc$ cat >A3.txt
+sruthii sff
+sd ffg
+fb  ggtgh
+dsfgghr
+bfbbb
+^C
+student@T40:~/mcvc$ cat A3.txt
+sruthii sff
+sd ffg
+fb  ggtgh
+dsfgghr
+bfbbb
+student@T40:~/mcvc$ cat c2 A2.txt
+cat: c2: No such file or directory
+cat: A2.txt: No such file or directory
+student@T40:~/mcvc$ cut c2 A3.txt
+cut: you must specify a list of bytes, characters, or fields
+Try 'cut --help' for more information.
+student@T40:~/mcvc$ cut -c2 A3.txt
+r
+d
+b
+s
+f
+student@T40:~/mcvc$ cut -c3 A3.txt
+u
+ 
+ 
+f
+b
+student@T40:~/mcvc$ cat >A4.txt
+asd	feff
+dfggg	dfdffg	dffffg df
+^C
+student@T40:~/mcvc$ cut -c 3,4,6,7,8 A4.txt 
+d	eff
+gg	df
+student@T40:~/mcvc$ cut -f A4.txt
+cut: invalid field value ‘A4.txt’
+Try 'cut --help' for more information.
+student@T40:~/mcvc$ cat > B1.txt
+dfffff,fdg"vfg"dvdvg,'dsf'
+dff'vfgf'   
+^C
+student@T40:~/mcvc$ cut -d "" -f B1.txt
+cut: invalid field value ‘B1.txt’
+Try 'cut --help' for more information.
+student@T40:~/mcvc$ cut -f 1 B1.txt
+dfffff,fdg"vfg"dvdvg,'dsf'
+dff'vfgf'
+student@T40:~/mcvc$ cut -d "" -f 1 B1.txt
+dfffff,fdg"vfg"dvdvg,'dsf'
+dff'vfgf'
+student@T40:~/mcvc$ cut -d "" -f 2 B1.txt
+dfffff,fdg"vfg"dvdvg,'dsf'
+dff'vfgf'
+student@T40:~/mcvc$ cat >B2.txt
+1	2       3	3
+2	24      5
+^C
+student@T40:~/mcvc$ cut -f 2 B2.txt
+2
+24
+student@T40:~/mcvc$ cut -d "" -f 2 B1.txt
+

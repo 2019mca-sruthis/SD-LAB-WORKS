@@ -1,0 +1,302 @@
+student@T40:~$ gedit pg1.sh
+student@T40:~$ gedit q1.sh
+^C
+student@T40:~$ chmod +xq s1.sh
+chmod: invalid mode: ‘+xq’
+Try 'chmod --help' for more information.
+student@T40:~$ chmod +x qs1.sh
+chmod: cannot access 'qs1.sh': No such file or directory
+student@T40:~$ chmod +x q1.sh
+student@T40:~$ ./q1.sh
+-p enter the two numbers
+^Cstudent@T40:~$ 
+student@T40:~$ ./q1.sh
+enter the two numbers
+2
+./q1.sh: line 3: [: 2: unary operator expected
+./q1.sh: line 7: [: 2: unary operator expected
+2 is less than 
+student@T40:~$ ./q1.sh
+enter the two numbers
+3 4
+./q1.sh: line 3: [: missing `]'
+./q1.sh: line 7: [: missing `]'
+3 is less than 4
+student@T40:~$ ./q1.sh
+enter the two numbers
+3 3
+equal
+not equal
+student@T40:~$ ./q1.sh
+enter the two numbers
+3 3
+./q1.sh: line 8: syntax error near unexpected token `elif'
+./q1.sh: line 8: `elif [ $a -gt $b ]'
+student@T40:~$ ./q1.sh
+enter the two numbers
+4
+./q1.sh: line 8: syntax error near unexpected token `elif'
+./q1.sh: line 8: `elif [ $a -gt $b ]'
+student@T40:~$ ./q1.sh
+enter the two numbers
+4 4
+equal
+student@T40:~$ ./q1.sh
+enter the two numbers
+6 5
+6 is greater than 5
+student@T40:~$ gedit q2.sh
+^C
+student@T40:~$ chmod +x q2.sh
+student@T40:~$ ./q2.sh
+enter the number
+3
+./q2.sh: line 3: syntax error near unexpected token `('
+./q2.sh: line 3: `n=(($a %2))'
+./q2.sh: line 7: syntax error near unexpected token `else'
+./q2.sh: line 7: `else '
+student@T40:~$ gedit q2.sh
+^C
+student@T40:~$ ./q2.sh
+enter the number
+3
+./q2.sh: line 3: % 2 : syntax error: operand expected (error token is "% 2 ")
+student@T40:~$ gedit q2.sh
+student@T40:~$ ./q2.sh
+enter the number
+7
+./q2.sh: line 3: % 2 : syntax error: operand expected (error token is "% 2 ")
+student@T40:~$ gedit q2.sh
+student@T40:~$ ./q2.sh
+enter the number
+3
+./q2.sh: line 3: % 2 : syntax error: operand expected (error token is "% 2 ")
+student@T40:~$ gedit q2.sh
+student@T40:~$ ./q2.sh
+enter the number
+5
+odd
+student@T40:~$ gedit q2.sh
+^C  
+student@T40:~$ ./q2.sh
+enter the number
+6
+./q2.sh: line 3: [: missing `]'
+odd
+student@T40:~$ gedit q2.sh
+student@T40:~$ ./q2.sh
+enter the number
+4
+./q2.sh: line 3: [: too many arguments
+odd
+student@T40:~$ gedit q2.sh
+student@T40:~$ ./q2.sh
+enter the number
+4
+even
+student@T40:~$ ./q2.sh
+enter the number
+7
+odd
+student@T40:~$ gedit q2.sh
+^C
+student@T40:~$ ./q2.sh
+enter the number
+5
+./q2.sh: line 4: 1: command not found
+./q2.sh: line 8: syntax error near unexpected token `elif'
+./q2.sh: line 8: `elif [ $r -eq 0 ]'
+student@T40:~$ ./q2.sh
+enter the number
+6
+./q2.sh: line 4: 0: command not found
+./q2.sh: line 8: syntax error near unexpected token `elif'
+./q2.sh: line 8: `elif [ $r -eq 0 ]'
+student@T40:~$ gedit q2.sh
+^C
+student@T40:~$ ./q2.sh
+enter the number
+6
+./q2.sh: line 4: 0: command not found
+./q2.sh: line 6: [: missing `]'
+./q2.sh: line 9: [: -eq: unary operator expected
+odd
+student@T40:~$ gedit q2.sh
+student@T40:~$ ./q2.sh
+enter the number
+5
+./q2.sh: line 4: 1: command not found
+./q2.sh: line 9: [: -eq: unary operator expected
+odd
+student@T40:~$ gedit q2.sh
+student@T40:~$ ./q2.sh
+enter the number
+7
+odd
+student@T40:~$ ./q2.sh
+enter the number
+0
+zero
+student@T40:~$ ./q2.sh
+enter the number
+8
+even
+student@T40:~$ gedit q2.sh
+student@T40:~$ gedit q3.sh
+^C
+student@T40:~$ chmod +x q3.sh
+student@T40:~$ ./q3.sh
+enter the year
+1997
+./q3.sh: line 3: =1: command not found
+./q3.sh: line 9: syntax error: unexpected end of file
+student@T40:~$ gedit q3.sh
+^C
+student@T40:~$ ./q3.sh
+enter the year
+2000
+./q3.sh: line 3: =0: command not found
+./q3.sh: line 9: syntax error: unexpected end of file
+student@T40:~$ gedit q3.sh
+^C
+student@T40:~$ ./q3.sh
+enter the year
+2000
+leapyear
+student@T40:~$ ./q3.sh
+enter the year
+1997
+not leapyear
+student@T40:~$ gedit q3.sh
+student@T40:~$ gedit q4.sh
+^C
+student@T40:~$ chmod +x q4.sh
+student@T40:~$ ./q4.sh
+enter the character
+a
+./q4.sh: line 3: [: missing `]'
+consonent
+student@T40:~$ gedit q4.sh
+^C
+student@T40:~$ ./q4.sh
+enter the character
+y
+./q4.sh: line 3: [: y: integer expression expected
+consonent
+student@T40:~$ gedit q4.sh
+^C
+student@T40:~$ ./q4.sh
+enter the character
+f
+./q4.sh: line 3: conditional binary operator expected
+./q4.sh: line 3: syntax error near `*[A-Za-z]*'
+./q4.sh: line 3: `if [[ $a!= *[A-Za-z]* ]]'
+student@T40:~$ gedit q4.sh
+^C
+student@T40:~$ ./q4.sh
+enter the character
+t
+./q4.sh: line 8: syntax error near unexpected token `elif'
+./q4.sh: line 8: `elif [ $a -eq *[aeioAEIOU ]]'
+student@T40:~$ gedit q4.sh
+^C
+student@T40:~$ ./q4.sh
+enter the character
+d
+./q4.sh: line 8: syntax error near unexpected token `elif'
+./q4.sh: line 8: `elif [ $a -eq *[aeioAEIOU]*]'
+student@T40:~$ gedit q4.sh
+^C
+student@T40:~$ gedit q4.sh
+student@T40:~$ ./q4.sh
+enter the character
+y
+./q4.sh: line 8: syntax error near unexpected token `elif'
+./q4.sh: line 8: `elif [ $a -eq *[aeioAEIOU]* ]'
+student@T40:~$ gedit q4.sh
+^C
+student@T40:~$ ./q4.sh
+enter the character
+y
+./q4.sh: line 6: [[: *[aeioAEIOU]*: syntax error: operand expected (error token is "*[aeioAEIOU]*")
+consonent
+student@T40:~$ gedit q4.sh
+^C
+student@T40:~$ ./q4.sh
+enter the character
+i
+vowel
+student@T40:~$ gedit q5.sh
+^C
+student@T40:~$ gedit q6.sh
+^C
+student@T40:~$ ./q5.sh
+bash: ./q5.sh: No such file or directory
+student@T40:~$ chmod +x q6.sh
+student@T40:~$ ./q6.sh
+enter the no.
+5
+student@T40:~$ gedit q6.sh
+^C
+student@T40:~$ ./q6.sh
+enter the no.
+6
+student@T40:~$ gedit q6.sh
+^C
+student@T40:~$ ./q6.sh
+enter the no.
+5
+student@T40:~$ gedit q6.sh
+^C  
+student@T40:~$ ./q6.sh
+enter the no.
+6
+student@T40:~$ gedit q6.sh
+student@T40:~$ ./q6.sh
+enter the no.
+8
+8
+7
+6
+5
+4
+3
+2
+1
+student@T40:~$ gedit q7.sh
+^C
+student@T40:~$ ./76.sh
+bash: ./76.sh: No such file or directory
+student@T40:~$ ./q7.sh
+bash: ./q7.sh: Permission denied
+student@T40:~$ chmod +x q7.sh
+student@T40:~$ ./q7.sh
+enter the no.
+7
+7 * { = $ (({ * 7 ))
+7 * 1..10 = $ ((1..10 * 7 ))
+7 * } = $ ((} * 7 ))
+student@T40:~$ gedit q7.sh
+^C
+student@T40:~$ ./q7.sh
+enter the no.
+7
+./q7.sh: line 5: { * 7 : syntax error: operand expected (error token is "{ * 7 ")
+student@T40:~$ gedit q7.sh
+^C
+student@T40:~$ ./q7.sh
+enter the no.
+6
+6 * 1 = 6
+6 * 2 = 12
+6 * 3 = 18
+6 * 4 = 24
+6 * 5 = 30
+6 * 6 = 36
+6 * 7 = 42
+6 * 8 = 48
+6 * 9 = 54
+6 * 10 = 60
+student@T40:~$ gedit q8.sh
+
+

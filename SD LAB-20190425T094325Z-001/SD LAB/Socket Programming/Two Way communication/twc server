@@ -1,0 +1,13 @@
+student@T40:~$ java Server.java
+Error: Could not find or load main class Server.java
+student@T40:~$ javac Server.java
+student@T40:~$ java Server
+waiting for client.........
+client connected 
+client:>sutrdsytdy
+hai
+client:>sruthii
+jii
+client:>hlo
+
+

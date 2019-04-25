@@ -1,0 +1,84 @@
+student@S36:~$ cd file1
+student@S36:~/file1$ cat f1
+cat: f1: No such file or directory
+student@S36:~/file1$ cat > f3
+how are you!!!
+^C
+student@S36:~/file1$ mv -b f1 f3
+mv: cannot stat 'f1': No such file or directory
+student@S36:~/file1$ mv -b f2 f3
+student@S36:~/file1$ ls
+f2~  f3  f3~
+student@S36:~/file1$ cat -E f1
+cat: f1: No such file or directory
+student@S36:~/file1$ cat -E f3
+hello$
+student@S36:~/file1$ cat > f4
+1
+2
+3
+
+
+
+4
+5
+
+
+
+
+6
+7 
+8
+
+
+
+
+9
+^C
+student@S36:~/file1$ cat -s f4
+1
+2
+3
+
+4
+5
+
+6
+7
+8
+
+9
+student@S36:~/file1$ mv -u f4 f3
+student@S36:~/file1$ cat > f5
+sruthi
+^C
+student@S36:~/file1$ 
+student@S36:~/file1$ mv -u f3 f5
+student@S36:~/file1$ mkdir a1
+student@S36:~/file1$ cat > a2
+qewrf
+^C
+student@S36:~/file1$ cd a1
+student@S36:~/file1/a1$ cat a2
+cat: a2: No such file or directory
+student@S36:~/file1/a1$ cat > a2
+sarts
+^C
+student@S36:~/file1/a1$ cd ..
+student@S36:~/file1$ mkdir a3
+student@S36:~/file1$ mv a1 a2
+student@S36:~/file1$ ls
+a2  a3  f2~  f3  f3~  f5
+student@S36:~/file1$ ls
+a1  a3  f2~  f3  f3~  f5
+student@S36:~/file1$ mv a1 a3
+student@S36:~/file1$ mkdir a4
+student@S36:~/file1$ a4 a3
+a4: command not found
+student@S36:~/file1$ mv a4 a3
+student@S36:~/file1$ mkdir a5
+student@S36:~/file1$ mv -u a5 a3
+student@S36:~/file1$ mkdir a6
+student@S36:~/file1$ mv a3 a6
+student@S36:~/file1$ 
+

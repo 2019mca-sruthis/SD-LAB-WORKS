@@ -1,0 +1,484 @@
+student@T40:~$ cd sruthigit
+student@T40:~/sruthigit$ git init
+Reinitialized existing Git repository in /home/student/sruthigit/.git/
+student@T40:~/sruthigit$ git init first
+Initialized empty Git repository in /home/student/sruthigit/first/.git/
+student@T40:~/sruthigit$ cd first
+student@T40:~/sruthigit/first$ gedit new.c
+student@T40:~/sruthigit/first$ gedit new.c
+student@T40:~/sruthigit/first$ gedit new.c
+student@T40:~/sruthigit/first$ git add new.c
+student@T40:~/sruthigit/first$ commit
+commit: command not found
+student@T40:~/sruthigit/first$ commit -m "new commit"
+commit: command not found
+student@T40:~/sruthigit/first$ git commit -m "new commit"
+[master (root-commit) 2625087] new commit
+ 1 file changed, 6 insertions(+)
+ create mode 100644 new.c
+student@T40:~/sruthigit/first$ git push origin master
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+student@T40:~/sruthigit/first$ git remote add origin https://github.com/2019mca-sruthis/sruthispillai.git
+student@T40:~/sruthigit/first$ git push origin master
+Username for 'https://github.com': 2019mca-sruthis
+Password for 'https://2019mca-sruthis@github.com': 
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 275 bytes | 275.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/2019mca-sruthis/sruthispillai.git
+ * [new branch]      master -> master
+student@T40:~/sruthigit/first$ git commit -m "second" 
+On branch master
+Changes not staged for commit:
+	modified:   new.c
+
+no changes added to commit
+student@T40:~/sruthigit/first$ git push origin master
+Username for 'https://github.com': 2019mca-sruthis
+Password for 'https://2019mca-sruthis@github.com': 
+To https://github.com/2019mca-sruthis/sruthispillai.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/2019mca-sruthis/sruthispillai.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+student@T40:~/sruthigit/first$ git merge new.c
+merge: new.c - not something we can merge
+student@T40:~/sruthigit/first$ git clone https://github.com/2019mca-sruthis/sruthispillai/blob/master/new.c
+fatal: destination path 'new.c' already exists and is not an empty directory.
+student@T40:~/sruthigit/first$ git clone master
+student@T40:~/sruthigit/first$ git clone https://github.com/2019mca-sruthis/sruthispillai
+Cloning into 'sruthispillai'...
+remote: Enumerating objects: 6, done.
+remote: Counting objects: 100% (6/6), done.
+remote: Compressing objects: 100% (4/4), done.
+remote: Total 6 (delta 0), reused 3 (delta 0), pack-reused 0
+Unpacking objects: 100% (6/6), done.
+student@T40:~/sruthigit/first$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   new.c
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	sruthispillai/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+student@T40:~/sruthigit/first$ git commit -m "third"
+On branch master
+Changes not staged for commit:
+	modified:   new.c
+
+Untracked files:
+	sruthispillai/
+
+no changes added to commit
+student@T40:~/sruthigit/first$ git add first.c
+fatal: pathspec 'first.c' did not match any files
+student@T40:~/sruthigit/first$ git add new.c
+student@T40:~/sruthigit/first$ git commit -m "third"
+[master faaff7d] third
+ 1 file changed, 1 insertion(+)
+student@T40:~/sruthigit/first$ git pull origin master
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/2019mca-sruthis/sruthispillai
+ * branch            master     -> FETCH_HEAD
+   2625087..423aeeb  master     -> origin/master
+Auto-merging new.c
+CONFLICT (content): Merge conflict in new.c
+Automatic merge failed; fix conflicts and then commit the result.
+student@T40:~/sruthigit/first$ git push origin master
+Username for 'https://github.com': 2019mca-sruthis
+Password for 'https://2019mca-sruthis@github.com': 
+To https://github.com/2019mca-sruthis/sruthispillai.git
+ ! [rejected]        master -> master (non-fast-forward)
+error: failed to push some refs to 'https://github.com/2019mca-sruthis/sruthispillai.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+student@T40:~/sruthigit/first$ git pull origin master
+error: Pulling is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
+student@T40:~/sruthigit/first$ git add new.c
+student@T40:~/sruthigit/first$ git commit -m "fourth"
+[master cc72102] fourth
+student@T40:~/sruthigit/first$ git commit -m "fourth"
+On branch master
+Changes not staged for commit:
+	modified:   new.c
+
+Untracked files:
+	sruthispillai/
+
+no changes added to commit
+student@T40:~/sruthigit/first$ git add new.c
+student@T40:~/sruthigit/first$ git commit -m "fourth"
+[master 1bd2adc] fourth
+ 1 file changed, 5 deletions(-)
+student@T40:~/sruthigit/first$ git push origin master
+Username for 'https://github.com': 2019mca-sruthis
+Password for 'https://2019mca-sruthis@github.com': 
+Counting objects: 7, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (7/7), 770 bytes | 770.00 KiB/s, done.
+Total 7 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/2019mca-sruthis/sruthispillai.git
+   423aeeb..1bd2adc  master -> master
+student@T40:~/sruthigit/first$ git pull origin master
+From https://github.com/2019mca-sruthis/sruthispillai
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+student@T40:~/sruthigit/first$ git pull origin master
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/2019mca-sruthis/sruthispillai
+ * branch            master     -> FETCH_HEAD
+   1bd2adc..0070418  master     -> origin/master
+Updating 1bd2adc..0070418
+Fast-forward
+ new.c | 1 +
+ 1 file changed, 1 insertion(+)
+student@T40:~/sruthigit/first$ git pull origin master
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (2/2), done.
+Unpacking objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+From https://github.com/2019mca-sruthis/sruthispillai
+ * branch            master     -> FETCH_HEAD
+   0070418..ae75255  master     -> origin/master
+Updating 0070418..ae75255
+error: Your local changes to the following files would be overwritten by merge:
+	new.c
+Please commit your changes or stash them before you merge.
+Aborting
+student@T40:~/sruthigit/first$ git commit -m "five"
+On branch master
+Changes not staged for commit:
+	modified:   new.c
+
+Untracked files:
+	sruthispillai/
+
+no changes added to commit
+student@T40:~/sruthigit/first$ git add new.c
+student@T40:~/sruthigit/first$ git commit -m "five"
+[master 798deec] five
+ 1 file changed, 1 deletion(-)
+student@T40:~/sruthigit/first$ git pull origin master
+From https://github.com/2019mca-sruthis/sruthispillai
+ * branch            master     -> FETCH_HEAD
+Auto-merging new.c
+CONFLICT (content): Merge conflict in new.c
+Automatic merge failed; fix conflicts and then commit the result.
+student@T40:~/sruthigit/first$ git pull origin master
+error: Pulling is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
+student@T40:~/sruthigit/first$ git pull origin master
+error: Pulling is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
+student@T40:~/sruthigit/first$ git pull origin master
+error: Pulling is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
+student@T40:~/sruthigit/first$ git branch new1
+student@T40:~/sruthigit/first$ git branch
+* master
+  new1
+student@T40:~/sruthigit/first$ git checkout new1
+new.c: needs merge
+error: you need to resolve your current index first
+student@T40:~/sruthigit/first$ git checkout branch new1
+error: pathspec 'branch' did not match any file(s) known to git.
+error: pathspec 'new1' did not match any file(s) known to git.
+student@T40:~/sruthigit/first$ git checkout new1
+new.c: needs merge
+error: you need to resolve your current index first
+student@T40:~/sruthigit/first$ git checkout new1
+new.c: needs merge
+error: you need to resolve your current index first
+student@T40:~/sruthigit/first$ git clone https://github.com/2019mca-sruthis/sruthispillai
+fatal: destination path 'sruthispillai' already exists and is not an empty directory.
+student@T40:~/sruthigit/first$ git checkout new1
+new.c: needs merge
+error: you need to resolve your current index first
+student@T40:~/sruthigit/first$ git checkout 9-sign-in-out
+error: pathspec '9-sign-in-out' did not match any file(s) known to git.
+student@T40:~/sruthigit/first$ git reset --merge
+student@T40:~/sruthigit/first$ git checkout new1
+Switched to branch 'new1'
+student@T40:~/sruthigit/first$ git push origin new1
+Username for 'https://github.com': 2019mca-sruthis
+Password for 'https://2019mca-sruthis@github.com': 
+Counting objects: 17, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (12/12), done.
+Writing objects: 100% (17/17), 2.39 KiB | 815.00 KiB/s, done.
+Total 17 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), done.
+remote: 
+remote: Create a pull request for 'new1' on GitHub by visiting:
+remote:      https://github.com/2019mca-sruthis/sruthispillai/pull/new/new1
+remote: 
+To https://github.com/2019mca-sruthis/sruthispillai.git
+ * [new branch]      new1 -> new1
+student@T40:~/sruthigit/first$ git log
+commit 798deece2362121b03bcc571d3e91a9b47b6f3f2 (HEAD -> new1, origin/new1, master)
+Author: Godislove143 <shanimariamgeorge@mca.ajce.in>
+Date:   Thu Apr 11 15:13:57 2019 +0530
+
+    five
+commit 798deece2362121b03bcc571d3e91a9b47b6f3f2 (HEAD -> new1, origin/new1, master)
+Author: Godislove143 <shanimariamgeorge@mca.ajce.in>
+Date:   Thu Apr 11 15:13:57 2019 +0530
+
+    five
+
+commit 00704180627a7aba9e44f3b1068f4d57a60873b1
+Author: 2019mca-sruthis <48617277+2019mca-sruthis@users.noreply.github.com>
+Date:   Thu Apr 11 15:10:01 2019 +0530
+
+    Update new.c
+
+commit 1bd2adca86da338275daded3fbed534e0f500abc
+Author: Godislove143 <shanimariamgeorge@mca.ajce.in>
+Date:   Thu Apr 11 15:06:09 2019 +0530
+
+    fourth
+
+commit cc7210271e8cb0204a00253f38ad5f0242f2d62d
+Merge: faaff7d 423aeeb
+Author: Godislove143 <shanimariamgeorge@mca.ajce.in>
+Date:   Thu Apr 11 15:04:54 2019 +0530
+
+    fourth
+
+commit faaff7d510216bee4e6884dc1939dbf46e5cab7b
+Author: Godislove143 <shanimariamgeorge@mca.ajce.in>
+Date:   Thu Apr 11 14:57:11 2019 +0530
+
+    third
+
+commit 423aeebdc0a406d6f7cf1b17a8a96e99150cd72f
+Author: 2019mca-sruthis <48617277+2019mca-sruthis@users.noreply.github.com>
+Date:   Thu Apr 11 14:31:22 2019 +0530
+
+    Update new.c
+
+commit 262508777ea4007c98c3f4164f7036b44623a877
+Author: Godislove143 <shanimariamgeorge@mca.ajce.in>
+Date:   Thu Apr 11 14:27:12 2019 +0530
+
+    new commit
+
+student@T40:~/sruthigit/first$ git -d   new1
+unknown option: -d
+usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+student@T40:~/sruthigit/first$ git branch -d new1
+error: Cannot delete branch 'new1' checked out at '/home/student/sruthigit/first'
+student@T40:~/sruthigit/first$ git branch
+  master
+* new1
+student@T40:~/sruthigit/first$ git checkout master
+Switched to branch 'master'
+student@T40:~/sruthigit/first$ git branch
+* master
+  new1
+student@T40:~/sruthigit/first$ git -d branch new1
+unknown option: -d
+usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+student@T40:~/sruthigit/first$ git checkout new1
+Switched to branch 'new1'
+student@T40:~/sruthigit/first$ git branch
+  master
+* new1
+student@T40:~/sruthigit/first$ git checkout master
+Switched to branch 'master'
+student@T40:~/sruthigit/first$ git branch -d new1
+Deleted branch new1 (was 798deec).
+student@T40:~/sruthigit/first$ git -rm new1
+unknown option: -rm
+usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+student@T40:~/sruthigit/first$ git branch -rm new1
+student@T40:~/sruthigit/first$ git push master --delete new1
+fatal: 'master' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+student@T40:~/sruthigit/first$ git branch
+* new1
+student@T40:~/sruthigit/first$ git fetch origin master
+remote: Enumerating objects: 11, done.
+remote: Counting objects: 100% (11/11), done.
+remote: Compressing objects: 100% (6/6), done.
+remote: Total 9 (delta 2), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (9/9), done.
+From https://github.com/2019mca-sruthis/sruthispillai
+ * branch            master     -> FETCH_HEAD
+   ae75255..abfc6f4  master     -> origin/master
+student@T40:~/sruthigit/first$ git diff origin master
+fatal: ambiguous argument 'origin': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+student@T40:~/sruthigit/first$ git diff origin/master
+diff --git a/new.c b/new.c
+index 31d7874..b980b46 100644
+--- a/new.c
++++ b/new.c
+@@ -1,9 +1,6 @@
+ #include<stdio.h>
+ int main()
+ {
+- v=19;
+- k=9;
+- printf("haiii");
+ printf("welcome");
+  printf("hellow");
+ return 0;
+student@T40:~/sruthigit/first$ git branch
+* new1
+student@T40:~/sruthigit/first$ git merge origin/master
+Auto-merging new.c
+CONFLICT (content): Merge conflict in new.c
+Automatic merge failed; fix conflicts and then commit the result.
+student@T40:~/sruthigit/first$ git merge origin/master
+error: Merging is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
+student@T40:~/sruthigit/first$ git fetch origin master
+From https://github.com/2019mca-sruthis/sruthispillai
+ * branch            master     -> FETCH_HEAD
+student@T40:~/sruthigit/first$ git diff origin/master
+diff --git a/new.c b/new.c
+index 31d7874..381ffdf 100644
+--- a/new.c
++++ b/new.c
+@@ -1,9 +1,12 @@
+ #include<stdio.h>
+ int main()
+ {
++<<<<<<< HEAD
++=======
+  v=19;
+  k=9;
+  printf("haiii");
++>>>>>>> origin/master
+ printf("welcome");
+  printf("hellow");
+ return 0;
+student@T40:~/sruthigit/first$ git merge origin/master
+error: Merging is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
+student@T40:~/sruthigit/first$ cd ..
+student@T40:~/sruthigit$ git init f1
+Initialized empty Git repository in /home/student/sruthigit/f1/.git/
+student@T40:~/sruthigit$ cd f1
+student@T40:~/sruthigit/f1$ gedit f1.c
+student@T40:~/sruthigit/f1$ gedit f1.c
+student@T40:~/sruthigit/f1$ git add f1.c
+student@T40:~/sruthigit/f1$ git commit f1.c
+Aborting commit due to empty commit message.
+student@T40:~/sruthigit/f1$ git commit -m "first"
+[master (root-commit) b4a0994] first
+ 1 file changed, 7 insertions(+)
+ create mode 100644 f1.c
+student@T40:~/sruthigit/f1$ git push f1.c
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream f1.c master
+
+student@T40:~/sruthigit/f1$ git push origin master
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+student@T40:~/sruthigit/f1$ git remote add origin https://github.com/2019mca-sruthis/file.c.git
+student@T40:~/sruthigit/f1$ git push origin master
+Username for 'https://github.com': 2019mca-sruthis
+Password for 'https://2019mca-sruthis@github.com': 
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 283 bytes | 283.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/2019mca-sruthis/file.c.git
+ * [new branch]      master -> master
+student@T40:~/sruthigit/f1$ git fetch origin master
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/2019mca-sruthis/file.c
+ * branch            master     -> FETCH_HEAD
+   b4a0994..dfd1f5f  master     -> origin/master
+student@T40:~/sruthigit/f1$ git diff origin/master
+diff --git a/f1.c b/f1.c
+index ab349f6..b980b46 100644
+--- a/f1.c
++++ b/f1.c
+@@ -1,7 +1,6 @@
+ #include<stdio.h>
+ int main()
+ {
+- a=10;
+ printf("welcome");
+  printf("hellow");
+ return 0;
+student@T40:~/sruthigit/f1$ git merge origin/master
+Updating b4a0994..dfd1f5f
+Fast-forward
+ f1.c | 1 +
+ 1 file changed, 1 insertion(+)
+student@T40:~/sruthigit/f1$ git revert HEAD
+[master 49a259b] Revert "Update f1.c"
+ 1 file changed, 1 deletion(-)
+student@T40:~/sruthigit/f1$ 
+

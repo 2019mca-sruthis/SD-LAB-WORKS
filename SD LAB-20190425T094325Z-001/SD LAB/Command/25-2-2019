@@ -1,0 +1,275 @@
+student@T40:~$ mkdir S4MCA
+student@T40:~$ cd S4MCA
+student@T40:~/S4MCA$ cat >dd1.txt
+asdafgsgbghgjgjjdfba
+dfwfghrhgh
+123243535
+fsgagfhfh cvdfg
+^C
+student@T40:~/S4MCA$ cat >d2.txt
+lkmjojidfuygh
+354657576
+y6762
+sda	ghdhjjyhjyhkj ghdf
+^C
+student@T40:~/S4MCA$ head d2.txt
+lkmjojidfuygh
+354657576
+y6762
+sda	ghdhjjyhjyhkj ghdf
+student@T40:~/S4MCA$ cat d1.txt
+cat: d1.txt: No such file or directory
+student@T40:~/S4MCA$ cat d2.txt
+lkmjojidfuygh
+354657576
+y6762
+sda	ghdhjjyhjyhkj ghdf
+gfhsfhjgjsj
+fgghnhjg	bfhfgnjgj
+ddgdfhfhgj
+gbgnjgh
+student@T40:~/S4MCA$ cat d1.txt
+cat: d1.txt: No such file or directory
+student@T40:~/S4MCA$ cat dd1.txt
+asdafgsgbghgjgjjdfba
+dfwfghrhgh
+123243535
+fsgagfhfh cvdfg
+fgghfdhgjjtkjk
+ghhtrjyjykuk
+dgfdghuhjkuyjretyeh
+student@T40:~/S4MCA$ head dd1.txt
+asdafgsgbghgjgjjdfba
+dfwfghrhgh
+123243535
+fsgagfhfh cvdfg
+fgghfdhgjjtkjk
+ghhtrjyjykuk
+dgfdghuhjkuyjretyeh
+student@T40:~/S4MCA$ cat dd1.txt
+asdafgsgbghgjgjjdfba
+dfwfghrhgh
+123243535
+fsgagfhfh cvdfg
+fgghfdhgjjtkjk
+ghhtrjyjykuk
+dgfdghuhjkuyjretyeh
+Hyderabad
+Itanagar
+Dispur
+Patna
+Raipur
+Panaji
+Gandhinagar
+Chandigarh
+Shimla
+Srinagar
+student@T40:~/S4MCA$ cat d2.txt
+lkmjojidfuygh
+354657576
+y6762
+sda	ghdhjjyhjyhkj ghdf
+gfhsfhjgjsj
+fgghnhjg	bfhfgnjgj
+ddgdfhfhgj
+gbgnjgh
+Andhra Pradesh
+Arunachal Pradesh
+Assam
+Bihar
+Chhattisgarh
+Goa
+Gujarat
+Haryana
+Himachal Pradesh
+Jammu and Kashmir
+student@T40:~/S4MCA$ head dd1.txt
+asdafgsgbghgjgjjdfba
+dfwfghrhgh
+123243535
+fsgagfhfh cvdfg
+fgghfdhgjjtkjk
+ghhtrjyjykuk
+dgfdghuhjkuyjretyeh
+Hyderabad
+Itanagar
+Dispur
+student@T40:~/S4MCA$ head -n 5 d2.txt
+lkmjojidfuygh
+354657576
+y6762
+sda	ghdhjjyhjyhkj ghdf
+gfhsfhjgjsj
+student@T40:~/S4MCA$ head -c d2.txt
+head: invalid number of bytes: ‘d2.txt’
+student@T40:~/S4MCA$ head -c 6 d2.txt
+lkmjojstudent@T40:~/S4MCA$ head -q dd1.txt d2.txt
+asdafgsgbghgjgjjdfba
+dfwfghrhgh
+123243535
+fsgagfhfh cvdfg
+fgghfdhgjjtkjk
+ghhtrjyjykuk
+dgfdghuhjkuyjretyeh
+Hyderabad
+Itanagar
+Dispur
+lkmjojidfuygh
+354657576
+y6762
+sda	ghdhjjyhjyhkj ghdf
+gfhsfhjgjsj
+fgghnhjg	bfhfgnjgj
+ddgdfhfhgj
+gbgnjgh
+Andhra Pradesh
+Arunachal Pradesh
+student@T40:~/S4MCA$ head -v d2.txt
+==> d2.txt <==
+lkmjojidfuygh
+354657576
+y6762
+sda	ghdhjjyhjyhkj ghdf
+gfhsfhjgjsj
+fgghnhjg	bfhfgnjgj
+ddgdfhfhgj
+gbgnjgh
+Andhra Pradesh
+Arunachal Pradesh
+student@T40:~/S4MCA$ ls -t
+dd1.txt  d2.txt
+student@T40:~/S4MCA$ ls -t |-n 1
+-n: command not found
+student@T40:~/S4MCA$ ls -t |head -n 1
+dd1.txt
+student@T40:~/S4MCA$ tail d2.txt
+Andhra Pradesh
+Arunachal Pradesh
+Assam
+Bihar
+Chhattisgarh
+Goa
+Gujarat
+Haryana
+Himachal Pradesh
+Jammu and Kashmir
+student@T40:~/S4MCA$ tail -25 d2.txt
+lkmjojidfuygh
+354657576
+y6762
+sda	ghdhjjyhjyhkj ghdf
+gfhsfhjgjsj
+fgghnhjg	bfhfgnjgj
+ddgdfhfhgj
+gbgnjgh
+Andhra Pradesh
+Arunachal Pradesh
+Assam
+Bihar
+Chhattisgarh
+Goa
+Gujarat
+Haryana
+Himachal Pradesh
+Jammu and Kashmir
+student@T40:~/S4MCA$ tail -f d2.txt
+Andhra Pradesh
+Arunachal Pradesh
+Assam
+Bihar
+Chhattisgarh
+Goa
+Gujarat
+Haryana
+Himachal Pradesh
+Jammu and Kashmir
+^C
+student@T40:~/S4MCA$ tail -c d2.txt
+tail: invalid number of bytes: ‘d2.txt’
+student@T40:~/S4MCA$ tail -c `13 d2.txt
+> ^C
+student@T40:~/S4MCA$ tail -c 13 d2.txt
+ and Kashmir
+student@T40:~/S4MCA$ 
+student@T40:~/S4MCA$ tail -n 4 d2.txt
+Gujarat
+Haryana
+Himachal Pradesh
+Jammu and Kashmir
+student@T40:~/S4MCA$ tail -
+^C
+student@T40:~/S4MCA$ tail -f d2.txt
+Andhra Pradesh
+Arunachal Pradesh
+Assam
+Bihar
+Chhattisgarh
+Goa
+Gujarat
+Haryana
+Himachal Pradesh
+Jammu and Kashmir
+^C      
+student@T40:~/S4MCA$ tail -b d2.txt
+lkmjojidfuygh
+354657576
+y6762
+sda	ghdhjjyhjyhkj ghdf
+gfhsfhjgjsj
+fgghnhjg	bfhfgnjgj
+ddgdfhfhgj
+gbgnjgh
+Andhra Pradesh
+Arunachal Pradesh
+Assam
+Bihar
+Chhattisgarh
+Goa
+Gujarat
+Haryana
+Himachal Pradesh
+Jammu and Kashmir
+student@T40:~/S4MCA$ tail -l d2.txt
+Andhra Pradesh
+Arunachal Pradesh
+Assam
+Bihar
+Chhattisgarh
+Goa
+Gujarat
+Haryana
+Himachal Pradesh
+Jammu and Kashmir
+student@T40:~/S4MCA$ 
+student@T40:~/S4MCA$ man more
+student@T40:~/S4MCA$ man less
+student@T40:~/S4MCA$ man less
+student@T40:~/S4MCA$ man less
+student@T40:~/S4MCA$ 
+student@T40:~/S4MCA$ man head
+student@T40:~/S4MCA$ head -n 10 dd1.txt |tail -5
+ghhtrjyjykuk
+dgfdghuhjkuyjretyeh
+Hyderabad
+Itanagar
+Dispur
+student@T40:~/S4MCA$ cat dd1.txt
+asdafgsgbghgjgjjdfba
+dfwfghrhgh
+123243535
+fsgagfhfh cvdfg
+fgghfdhgjjtkjk
+ghhtrjyjykuk
+dgfdghuhjkuyjretyeh
+Hyderabad
+Itanagar
+Dispur
+Patna
+Raipur
+Panaji
+Gandhinagar
+Chandigarh
+Shimla
+Srinagar
+student@T40:~/S4MCA$ 
+

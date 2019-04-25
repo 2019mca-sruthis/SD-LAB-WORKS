@@ -1,0 +1,192 @@
+student@T40:~$ mkdir A
+student@T40:~$ cd a
+bash: cd: a: No such file or directory
+student@T40:~$ cd A
+student@T40:~/A$ cat >c1.txt
+ase saffdegA flower, sometimes known as a bloom or blossom, is the reproductive structure found in flowering plants (plants of the division Magnoliophyta, also called angiosperms). The biological function of a flower is to effect reproduction, usually by providing a mechanism for the union of sperm with eggs.  Flowers may facilitate outcrossing (fusion of sperm and eggs from different individuals in a population) or allow selfing (fusion of sperm and egg from the same flower). 
+^C
+student@T40:~/A$ cd c2.txt
+bash: cd: c2.txt: No such file or directory
+student@T40:~/A$ cd >c2.txt
+student@T40:~$ cat >c2.txt
+hiii...aaaaaaaaaaaarrrrr welcome
+hdfvgcdhgfvdhgfs welcome vbghcfgdswelcome...sf
+flower djsfhjgdshfg hiii
+FLOWER hfhsfkfds hii eras
+^C
+student@T40:~$ cat > c3.txt
+n addition to facilitating the reproduction of flowering plants, flowers have long been admired and used by humans to bring beauty to their environment, and also as objects of romance, ritual, religion, medicine and as a source of food. 
+FOOD fhgjkggggggggggggggADDITION hf The essential parts of a flower can be considered in two parts: the vegetative part, consisting of petals and associated structures in the perianth, and the reproductive or sexual parts. A stereotypical flower consists of four kinds of structures attached to the tip of a short stalk. Each of these kinds of parts is arranged in a whorl on the receptacle.
+^C
+student@T40:~$ 
+student@T40:~$ cat > c4.txt
+consisting of units called stamens. Stamens consist of two parts: a stalk called a filament, topped by an anther where pollen is produced by meiosis and eventually dispersed.
+Gynoecium (from Greek gynaikos oikia: woman's house): the innermost whorl of a flower, consisting of one or more units called carpels. The carpel or multiple fused carpels form a hollow structure called an ovary, which produces ovules internally. Ovules are megasporangia and they in turn produce megaspores by meiosis which develop into female gametophytes. These give rise to egg cells.FLOWER addition
+welcome ....              
+^C
+student@T40:~$ cd A
+student@T40:~/A$ grep "flower"c1.txt
+^C
+student@T40:~/A$ ls
+c1.txt  c2.txt  c3.txt  c4.txt
+student@T40:~/A$ grep "flower" c2.txt
+flower djsfhjgdshfg hiii
+student@T40:~/A$ grep "flower" c2.txt c3.txt
+c2.txt:flower djsfhjgdshfg hiii
+c3.txt:n addition to facilitating the reproduction of flowering plants, flowers have long been admired and used by humans to bring beauty to their environment, and also as objects of romance, ritual, religion, medicine and as a source of food. 
+c3.txt:FOOD fhgjkggggggggggggggADDITION hf The essential parts of a flower can be considered in two parts: the vegetative part, consisting of petals and associated structures in the perianth, and the reproductive or sexual parts. A stereotypical flower consists of four kinds of structures attached to the tip of a short stalk. Each of these kinds of parts is arranged in a whorl on the receptacle.
+student@T40:~/A$ grep -i "FloWer c3.txt
+> ^C
+student@T40:~/A$ egrep -w 'flower' c2.txt
+flower djsfhjgdshfg hiii
+student@T40:~/A$ egrep -w 'flower' c3.txt
+FOOD fhgjkggggggggggggggADDITION hf The essential parts of a flower can be considered in two parts: the vegetative part, consisting of petals and associated structures in the perianth, and the reproductive or sexual parts. A stereotypical flower consists of four kinds of structures attached to the tip of a short stalk. Each of these kinds of parts is arranged in a whorl on the receptacle.
+student@T40:~/A$ grep 'flower' c3.txt
+n addition to facilitating the reproduction of flowering plants, flowers have long been admired and used by humans to bring beauty to their environment, and also as objects of romance, ritual, religion, medicine and as a source of food. 
+FOOD fhgjkggggggggggggggADDITION hf The essential parts of a flower can be considered in two parts: the vegetative part, consisting of petals and associated structures in the perianth, and the reproductive or sexual parts. A stereotypical flower consists of four kinds of structures attached to the tip of a short stalk. Each of these kinds of parts is arranged in a whorl on the receptacle.
+student@T40:~/A$ grep '*' c3.txt
+FOOD fhgjkggggggggggggggADDITION hf The essential parts of a flower can be considered in two parts: the vegetative part, consisting of petals and associated structures in the perianth, and the reproductive or sexual parts. A stereotypical flower consists of four kinds of structures attached to the tip of a short stalk. Each of these kinds of parts is arranged in a whorl on the receptacle.** ..""ghjfdf
+student@T40:~/A$ grep -B3 c3.txt
+^C
+student@T40:~/A$ grep -B3"associated" c3.txt
+grep: 3associated: invalid context length argument
+student@T40:~/A$ cat c2.txt
+hiii...aaaaaaaaaaaarrrrr welcome
+hdfvgcdhgfvdhgfs welcome vbghcfgdswelcome...sf
+flower djsfhjgdshfg hiii
+FLOWER hfhsfkfds hii eras
+student@T40:~/A$ grep -B3"flower" c2.txt
+grep: 3flower: invalid context length argument
+student@T40:~/A$ cat c3.txt
+n addition to facilitating the reproduction of flowering plants, flowers have long been admired and used by humans to bring beauty to their environment, and also as objects of romance, ritual, religion, medicine and as a source of food. 
+FOOD fhgjkggggggggggggggADDITION hf The essential parts of a flower can be considered in two parts: the vegetative part, consisting of petals and associated structures in the perianth, and the reproductive or sexual parts. A stereotypical flower consists of four kinds of structures attached to the tip of a short stalk. Each of these kinds of parts is arranged in a whorl on the receptacle.** ..""ghjfdf
+jiiiii
+hoiiiii
+kiii
+hiiii
+kjhf
+kjgg
+student@T40:~/A$ grep -B3"kiii" c3.txt
+grep: 3kiii: invalid context length argument
+student@T40:~/A$ grep -B3 "kiii" c3.txt
+FOOD fhgjkggggggggggggggADDITION hf The essential parts of a flower can be considered in two parts: the vegetative part, consisting of petals and associated structures in the perianth, and the reproductive or sexual parts. A stereotypical flower consists of four kinds of structures attached to the tip of a short stalk. Each of these kinds of parts is arranged in a whorl on the receptacle.** ..""ghjfdf
+jiiiii
+hoiiiii
+kiii
+student@T40:~/A$ grep -A3 "kiii" c3.txt
+kiii
+hiiii
+kjhf
+kjgg
+student@T40:~/A$ grep -v "part" c3.txt
+n addition to facilitating the reproduction of flowering plants, flowers have long been admired and used by humans to bring beauty to their environment, and also as objects of romance, ritual, religion, medicine and as a source of food. 
+jiiiii
+hoiiiii
+kiii
+hiiii
+kjhf
+kjgg
+student@T40:~/A$ cat c3.txt
+n addition to facilitating the reproduction of flowering plants, flowers have long been admired and used by humans to bring beauty to their environment, and also as objects of romance, ritual, religion, medicine and as a source of food. 
+FOOD fhgjkggggggggggggggADDITION hf The essential parts of a flower can be considered in two parts: the vegetative part, consisting of petals and associated structures in the perianth, and the reproductive or sexual parts. A stereotypical flower consists of four kinds of structures attached to the tip of a short stalk. Each of these kinds of parts is arranged in a whorl on the receptacle.** ..""ghjfdf
+jiiiii
+hoiiiii
+kiii
+hiiii
+kjhf
+kjgg
+student@T40:~/A$ grep -v "part" c3.txt
+n addition to facilitating the reproduction of flowering plants, flowers have long been admired and used by humans to bring beauty to their environment, and also as objects of romance, ritual, religion, medicine and as a source of food. 
+jiiiii
+hoiiiii
+kiii
+hiiii
+kjhf
+kjgg
+student@T40:~/A$ grep -c "part" c3.txt
+1
+student@T40:~/A$ grep -c "parts" c3.txt
+1
+student@T40:~/A$ cat c3.txt
+n addition to facilitating the reproduction of flowering plants, flowers have long been admired and used by humans to bring beauty to their environment, and also as objects of romance, ritual, religion, medicine and as a source of food. 
+FOOD fhgjkggggggggggggggADDITION hf The essential parts of a flower can be considered in two parts: the vegetative part, consisting of petals and associated structures in the perianth, and the reproductive or sexual parts. A stereotypical flower consists of four kinds of structures attached to the tip of a short stalk. Each of these kinds of parts is arranged in a whorl on the receptacle.** ..""ghjfdf
+jiiiii
+hoiiiii
+kiii
+hiiii
+kjhf
+kjgg
+student@T40:~/A$ cat > c5.txt
+part
+part
+gdh
+part
+^C
+student@T40:~/A$ grep -c "part" c5.txt
+3
+student@T40:~/A$ grep -n "part" c5.txt
+1:part
+2:part
+4:part
+student@T40:~/A$ grep "^Each"c3.txt
+^C
+student@T40:~/A$ 
+student@T40:~/A$ grep "^part"c5.txt
+^C  
+student@T40:~/A$ grep "^part" c5.txt
+part
+part
+part
+student@T40:~/A$ grep "i$" c3.txt
+jiiiii
+hoiiiii
+kiii
+hiiii
+student@T40:~/A$ grep -l "flower" *
+c1.txt
+c2.txt
+c3.txt
+c4.txt
+student@T40:~/A$ echo grep
+grep
+student@T40:~/A$ man grep
+student@T40:~/A$ cat >f1.txt
+hii sruthii
+asrejekmvfkjg vnfvrgh
+how are youu....     
+ashaa..hii
+welcomee WElcome 
+^C
+student@T40:~/A$ 
+student@T40:~/A$ grep -c "ashaa" f1.txt
+0
+student@T40:~/A$ cat > f2.txt
+sruthiii
+SRUTHII
+chiTHRA
+AKKU
+*** 
+aswathy 
+^C
+student@T40:~/A$ grep -c "AKKU" f2.txt
+1
+student@T40:~/A$ CAT >f3.txt
+CAT: command not found
+student@T40:~/A$ cat >f3.txt
+appu kichuu
+123
+hlww.. how are youu
+welcome
+^C
+student@T40:~/A$ grep -i "chithra" f2.txt
+chiTHRA
+student@T40:~/A$ grep -w 'sruthii|123' f2.txt f3.txt
+student@T40:~/A$ egrep -w 'sruthii|123' f2.txt f3.txt
+f3.txt:123
+f3.txt:sruthii
+student@T40:~/A$ egrep -w 'sruthii|123' f1.txt f3.txt
+f1.txt:hii sruthii
+f3.txt:123
+f3.txt:sruthii
+student@T40:~/A$ 
+

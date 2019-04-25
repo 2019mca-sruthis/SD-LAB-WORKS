@@ -1,0 +1,72 @@
+student@T40:~$ cd sruthigit
+student@T40:~/sruthigit$ cd sa1
+student@T40:~/sruthigit/sa1$ git clone https://github.com/2019mca-sruthis/sa1
+Cloning into 'sa1'...
+Username for 'https://github.com': 2019mca-sruthis
+Password for 'https://2019mca-sruthis@github.com': 
+warning: You appear to have cloned an empty repository.
+student@T40:~/sruthigit/sa1$ gedit a2.c
+student@T40:~/sruthigit/sa1$ gedit a2.c
+student@T40:~/sruthigit/sa1$ git add a2.c
+student@T40:~/sruthigit/sa1$ git commit -m "first commit"
+[master (root-commit) 62180f3] first commit
+ 1 file changed, 6 insertions(+)
+ create mode 100644 a2.c
+student@T40:~/sruthigit/sa1$ git push origin master
+Username for 'https://github.com': 2010mca-sruthis
+Password for 'https://2010mca-sruthis@github.com': 
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/2019mca-sruthis/sa1/'
+student@T40:~/sruthigit/sa1$ git push origin master
+Username for 'https://github.com': 2019mca-sruthis
+Password for 'https://2019mca-sruthis@github.com': 
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 274 bytes | 274.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/2019mca-sruthis/sa1
+ * [new branch]      master -> master
+student@T40:~/sruthigit/sa1$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	f1.c
+	f1.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+student@T40:~/sruthigit/sa1$ git rm a2.c
+rm 'a2.c'
+student@T40:~/sruthigit/sa1$ git branch feature
+student@T40:~/sruthigit/sa1$ git branch 
+  feature
+* master
+student@T40:~/sruthigit/sa1$ git checkout feature
+D	a2.c
+Switched to branch 'feature'
+student@T40:~/sruthigit/sa1$ git push origin feature
+Username for 'https://github.com': 2019mca-sruthis
+Password for 'https://2019mca-sruthis@github.com': 
+Total 0 (delta 0), reused 0 (delta 0)
+remote: 
+remote: Create a pull request for 'feature' on GitHub by visiting:
+remote:      https://github.com/2019mca-sruthis/sa1/pull/new/feature
+remote: 
+To https://github.com/2019mca-sruthis/sa1
+ * [new branch]      feature -> feature
+student@T40:~/sruthigit/sa1$ git pull <sa1>
+bash: syntax error near unexpected token `newline'
+student@T40:~/sruthigit/sa1$ git pull sa1
+fatal: Couldn't find remote ref HEAD
+fatal: The remote end hung up unexpectedly
+student@T40:~/sruthigit/sa1$ gedit a3.c
+^C      
+student@T40:~/sruthigit/sa1$ gedit a3.c
+^C
+student@T40:~/sruthigit/sa1$ git commit a3.c
+error: pathspec 'a3.c' did not match any file(s) known to git.
+student@T40:~/sruthigit/sa1$ 
+

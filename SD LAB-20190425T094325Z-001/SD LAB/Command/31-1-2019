@@ -1,0 +1,114 @@
+tudent@T40:~$ mkdir ajce
+student@T40:~$ cd ajce
+student@T40:~/ajce$ pwd
+/home/student/ajce
+student@T40:~/ajce$ mkdir mca
+student@T40:~/ajce$ cd mca
+student@T40:~/ajce/mca$ mkdir rmca
+student@T40:~/ajce/mca$ mkdir lmca
+student@T40:~/ajce/mca$ mkdir intmca
+student@T40:~/ajce/mca$ cd rmca
+student@T40:~/ajce/mca/rmca$ cd ..
+student@T40:~/ajce/mca$ pwd
+/home/student/ajce/mca
+student@T40:~/ajce/mca$ cd /
+student@T40:/$ cd ~
+student@T40:~$ pwd
+/home/student
+student@T40:~$ cd home
+bash: cd: home: No such file or directory
+student@T40:~$ pwd
+/home/student
+student@T40:~$ cd ajce
+student@T40:~/ajce$ cd ..
+student@T40:~$ cd mca
+bash: cd: mca: No such file or directory
+student@T40:~$ cd ajce
+student@T40:~/ajce$ cd mca
+student@T40:~/ajce/mca$ ls 
+intmca  lmca  rmca
+student@T40:~/ajce/mca$ ls -l
+total 12
+drwxr-xr-x 2 student student 4096 Jan 31 14:34 intmca
+drwxr-xr-x 2 student student 4096 Jan 31 14:33 lmca
+drwxr-xr-x 2 student student 4096 Jan 31 14:33 rmca
+student@T40:~/ajce/mca$ ls -a
+.  ..  intmca  lmca  rmca
+student@T40:~/ajce/mca$ ls -d
+.
+student@T40:~/ajce/mca$ ls -a
+.  ..  intmca  lmca  rmca
+student@T40:~/ajce/mca$ ls -R
+.:
+intmca  lmca  rmca
+
+./intmca:
+
+./lmca:
+
+./rmca:
+student@T40:~/ajce/mca$ ls *
+intmca:
+
+lmca:
+
+rmca:
+student@T40:~/ajce/mca$ ls ~
+ajce              exception2.cpp  exception5      Public           sample
+Desktop           exception2.o    exception5.cpp  PycharmProjects  snap
+Documents         exception3.cpp  exception5.o    q1.c             Templates
+Downloads         exception4      exception.cpp   q1.cpp           Videos
+examples.desktop  exception4.cpp  Music           ques1.cpp
+exception2        exception4.o    Pictures        ques2.cpp
+student@T40:~/ajce/mca$ ls -R
+.:
+intmca  lmca  rmca
+
+./intmca:
+
+./lmca:
+
+./rmca:
+student@T40:~/ajce/mca$ ls >out.txt
+student@T40:~/ajce/mca$ ls
+intmca  lmca  out.txt  rmca
+student@T40:~/ajce/mca$ ls -t
+out.txt  intmca  lmca  rmca
+student@T40:~/ajce/mca$ ls
+intmca  lmca  out.txt  rmca
+student@T40:~/ajce/mca$ ls -s
+total 16
+4 intmca  4 lmca  4 out.txt  4 rmca
+student@T40:~/ajce/mca$ cd rmca
+student@T40:~/ajce/mca/rmca$ cd mca
+bash: cd: mca: No such file or directory
+student@T40:~/ajce/mca/rmca$ cd ..
+student@T40:~/ajce/mca$ cd ~
+student@T40:~$ man cd
+No manual entry for cd
+student@T40:~$ man cd ..
+No manual entry for cd
+No manual entry for ..
+student@T40:~$ cd /
+student@T40:/$ cd~
+
+Command 'cd~' not found, did you mean:
+
+  command 'cdb' from deb tinycdb
+  command 'cdw' from deb cdw
+  command 'cde' from deb cde
+  command 'cdp' from deb irpas
+  command 'cdo' from deb cdo
+  command 'cdv' from deb codeville
+  command 'cd5' from deb cd5
+  command 'cdi' from deb cdo
+
+Try: apt install <deb name>
+
+student@T40:/$ cd ~
+student@T40:~$ cd ..
+student@T40:/home$ man ls
+student@T40:/home$ man pwd
+student@T40:/home$ man ls
+student@T40:/home$ 
+

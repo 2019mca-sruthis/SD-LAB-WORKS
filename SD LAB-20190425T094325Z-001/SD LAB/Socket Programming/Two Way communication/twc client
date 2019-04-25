@@ -1,0 +1,50 @@
+student@T40:~$ gedit client.java
+^C
+student@T40:~$ javac Client.java
+javac: file not found: Client.java
+Usage: javac <options> <source files>
+use -help for a list of possible options
+student@T40:~$ gedit client.java
+^C
+student@T40:~$ gedit Client.java
+student@T40:~$ gedit client.java
+student@T40:~$ javac client.java
+client.java:6: error: ';' expected
+        public static void main(String[] args) throws IOException 
+                                                                 ^
+client.java:9: error: <identifier> expected
+                System.out.println("Client connected to the server");
+                                  ^
+client.java:9: error: illegal start of type
+                System.out.println("Client connected to the server");
+                                   ^
+client.java:18: error: <identifier> expected
+                System.out.println("to Start the chat, type message and press Enter key"); 
+                                  ^
+client.java:18: error: illegal start of type
+                System.out.println("to Start the chat, type message and press Enter key"); 
+                                   ^
+client.java:20: error: illegal start of type
+                while(true)
+                ^
+client.java:20: error: illegal start of type
+                while(true)
+                      ^
+client.java:36: error: class, interface, or enum expected
+}
+^
+8 errors
+student@T40:~$ gedit client.java
+student@T40:~$ javac client.java
+student@T40:~$ java client
+Client connected to the server
+to Start the chat, type message and press Enter key
+sutrdsytdy
+sruthii
+server:>hai
+hlo
+
+
+server:>jii
+
+

@@ -1,0 +1,370 @@
+student@T40:~$ touch f1
+student@T40:~$ cat >f1
+hello
+^Z
+[1]+  Stopped                 cat > f1
+student@T40:~$ cd ajce
+student@T40:~/ajce$ cd mca
+student@T40:~/ajce/mca$ cd rmca
+student@T40:~/ajce/mca/rmca$ touch f1
+student@T40:~/ajce/mca/rmca$ touch f2
+student@T40:~/ajce/mca/rmca$ sample.txt
+sample.txt: command not found
+student@T40:~/ajce/mca/rmca$ touch sample
+student@T40:~/ajce/mca/rmca$ cat >sample
+haii 
+welcome!!!!^Z       
+[2]+  Stopped                 cat > sample
+student@T40:~/ajce/mca/rmca$ cat >file1.txt
+hai welcome back...^Z
+[3]+  Stopped                 cat > file1.txt
+student@T40:~/ajce/mca/rmca$ cat file1
+cat: file1: No such file or directory
+student@T40:~/ajce/mca/rmca$ cat >file1.txt
+haiii welcome back
+^C
+student@T40:~/ajce/mca/rmca$ cat file1.txt
+haiii welcome back
+student@T40:~/ajce/mca/rmca$ cat >file2
+hiiii...                  
+how are you...    
+^C
+student@T40:~/ajce/mca/rmca$ cat file1.txt file2.txt
+haiii welcome back
+cat: file2.txt: No such file or directory
+student@T40:~/ajce/mca/rmca$ touch file2
+student@T40:~/ajce/mca/rmca$ cat >file3
+hello   
+how are you
+^C
+student@T40:~/ajce/mca/rmca$ cat -n file1
+cat: file1: No such file or directory
+student@T40:~/ajce/mca/rmca$ cat -n file1.txt
+     1	haiii welcome back
+student@T40:~/ajce/mca/rmca$ cat -n file3.txt
+cat: file3.txt: No such file or directory
+student@T40:~/ajce/mca/rmca$ touch file 4
+student@T40:~/ajce/mca/rmca$ cat >file4
+haiii....  
+sruthi...
+^C
+student@T40:~/ajce/mca/rmca$ cat -n file4.txt
+cat: file4.txt: No such file or directory
+student@T40:~/ajce/mca/rmca$ cat >file 4.txt
+cat: 4.txt: No such file or directory
+student@T40:~/ajce/mca/rmca$ touch file4.txt
+student@T40:~/ajce/mca/rmca$ cat >file4.txt
+welcome sruthyy...         
+^C
+student@T40:~/ajce/mca/rmca$ cat file4.txt
+welcome sruthyy...
+student@T40:~/ajce/mca/rmca$ cat file1.txt file4.txt
+haiii welcome back
+welcome sruthyy...
+student@T40:~/ajce/mca/rmca$ touch file5.txt
+student@T40:~/ajce/mca/rmca$ cat >file5.txt
+hellow ..world!!
+^C
+student@T40:~/ajce/mca/rmca$ cat file1.txt>file4.txt
+student@T40:~/ajce/mca/rmca$ cat file4.txt
+haiii welcome back
+student@T40:~/ajce/mca/rmca$ cat file1.txt file4.txt>new.txt
+student@T40:~/ajce/mca/rmca$ cat new.txt
+haiii welcome back
+haiii welcome back
+student@T40:~/ajce/mca/rmca$ cat file1.txt:file4.txt:file5.txt
+cat: 'file1.txt:file4.txt:file5.txt': No such file or directory
+student@T40:~/ajce/mca/rmca$ cat file1.txt;file4.txt;file5.txt
+haiii welcome back
+file4.txt: command not found
+file5.txt: command not found
+student@T40:~/ajce/mca/rmca$ cat file1.txt;cat file4.txt; cat file5.txt
+haiii welcome back
+haiii welcome back
+hellow ..world!!
+student@T40:~/ajce/mca/rmca$ touch newfile.txt
+student@T40:~/ajce/mca/rmca$ cat >newfile.txt
+1
+2
+
+
+
+
+4
+5
+
+6
+
+
+
+
+7
+8 
+
+
+
+
+
+
+9
+10
+^C
+student@T40:~/ajce/mca/rmca$ cat -s newfile.txt
+1
+2
+
+4
+5
+
+6
+
+7
+8
+
+9
+10
+student@T40:~/ajce/mca/rmca$ cat newfile.txt
+1
+2
+
+
+
+
+4
+5
+
+6
+
+
+
+
+7
+8
+
+
+
+
+
+
+9
+10
+student@T40:~/ajce/mca/rmca$ cat -n newfile.txt
+     1	1
+     2	2
+     3	
+     4	
+     5	
+     6	
+     7	4
+     8	5
+     9	
+    10	6
+    11	
+    12	
+    13	
+    14	
+    15	7
+    16	8
+    17	
+    18	
+    19	
+    20	
+    21	
+    22	
+    23	9
+    24	10
+student@T40:~/ajce/mca/rmca$ cat *.txt
+haiii welcome back
+haiii welcome back
+hellow ..world!!
+1
+2
+
+
+
+
+4
+5
+
+6
+
+
+
+
+7
+8
+
+
+
+
+
+
+9
+10
+haiii welcome back
+haiii welcome back
+student@T40:~/ajce/mca/rmca$ cat file4.txt>>file1.txt
+student@T40:~/ajce/mca/rmca$ cat file1.txt
+haiii welcome back
+haiii welcome back
+student@T40:~/ajce/mca/rmca$ cat file4.txt
+haiii welcome back
+student@T40:~/ajce/mca/rmca$ cat file1.txt
+haiii welcome back
+haiii welcome back
+student@T40:~/ajce/mca/rmca$ cat file1.txt>>file5.txt
+student@T40:~/ajce/mca/rmca$ cat file5.txt
+hellow ..world!!
+haiii welcome back
+haiii welcome back
+student@T40:~/ajce/mca/rmca$ cat -b newfile.txt
+     1	1
+     2	2
+
+
+
+
+     3	4
+     4	5
+
+     5	6
+
+
+
+
+     6	7
+     7	8
+
+
+
+
+
+
+     8	9
+     9	10
+student@T40:~/ajce/mca/rmca$ tac newfile.txt
+10
+9
+
+
+
+
+
+
+8
+7
+
+
+
+
+6
+
+5
+4
+
+
+
+
+2
+1
+student@T40:~/ajce/mca/rmca$ cat -E newfile.txt
+1$
+2$
+$
+$
+$
+$
+4$
+5$
+$
+6$
+$
+$
+$
+$
+7$
+8$
+$
+$
+$
+$
+$
+$
+9$
+10$
+student@T40:~/ajce/mca/rmca$ cat -v newfile.txt
+1
+2
+
+
+
+
+4
+5
+
+6
+
+
+
+
+7
+8
+
+
+
+
+
+
+9
+10
+student@T40:~/ajce/mca/rmca$ cat file5.txt
+hellow ..world!!
+haiii welcome back
+haiii welcome back
+student@T40:~/ajce/mca/rmca$ mv file1.txt file5.txt
+student@T40:~/ajce/mca/rmca$ cat file5
+cat: file5: No such file or directory
+student@T40:~/ajce/mca/rmca$ cat file5.txt
+haiii welcome back
+haiii welcome back
+student@T40:~/ajce/mca/rmca$ mv file5.txt newfile.txt
+student@T40:~/ajce/mca/rmca$ cat newfile.txt
+haiii welcome back
+haiii welcome back
+student@T40:~/ajce/mca/rmca$ ls newfile.txt
+newfile.txt
+student@T40:~/ajce/mca/rmca$ ls
+4  f1  f2  file  file2  file3  file4  file4.txt  newfile.txt  new.txt  sample
+student@T40:~/ajce/mca/rmca$ mv -i newfile.txt file4.txt
+mv: overwrite 'file4.txt'? n
+student@T40:~/ajce/mca/rmca$ ls
+4  f1  f2  file  file2  file3  file4  file4.txt  newfile.txt  new.txt  sample
+student@T40:~/ajce/mca/rmca$ mv lmca rmca
+mv: cannot stat 'lmca': No such file or directory
+student@T40:~/ajce/mca/rmca$ cd ..
+student@T40:~/ajce/mca$ mv lmca rmca
+student@T40:~/ajce/mca$ ls rmca
+4   f2    file2  file4      lmca         new.txt
+f1  file  file3  file4.txt  newfile.txt  sample
+student@T40:~/ajce/mca$ cd rmca
+student@T40:~/ajce/mca/rmca$ ls
+4   f2    file2  file4      lmca         new.txt
+f1  file  file3  file4.txt  newfile.txt  sample
+student@T40:~/ajce/mca/rmca$ cd ..
+student@T40:~/ajce/mca$ mv f2.txt file4.txt xyz
+mv: target 'xyz' is not a directory
+student@T40:~/ajce/mca$ cd rmca
+student@T40:~/ajce/mca/rmca$ mv f2.txt file4.txt xyz
+mv: cannot stat 'f2.txt': No such file or directory
+student@T40:~/ajce/mca/rmca$ mv f2 file4.txt xyz
+mv: cannot stat 'file4.txt': No such file or directory
+student@T40:~/ajce/mca/rmca$ ls
+4  f1  file  file2  file3  file4  lmca  newfile.txt  new.txt  sample  xyz
+student@T40:~/ajce/mca/rmca$ mv new.txt xyz
+student@T40:~/ajce/mca/rmca$ ls
+4  f1  file  file2  file3  file4  lmca  newfile.txt  sample  xyz
+student@T40:~/ajce/mca/rmca$ mv *.txt xyz
+student@T40:~/ajce/mca/rmca$ ls
+4  f1  file  file2  file3  file4  lmca  sample  xyz
+student@T40:~/ajce/mca/rmca$ 
+

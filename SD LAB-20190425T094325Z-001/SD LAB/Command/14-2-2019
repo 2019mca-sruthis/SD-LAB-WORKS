@@ -1,0 +1,129 @@
+student@T40:~$ cd mcvc
+student@T40:~/mcvc$ ls
+123  A1.txt  a2.txt  A3.txt  A4.txt  B1.txt  B2.txt  file2.txt  file3.txt  file4.txt  file5.txt  M  v1.txt  X
+student@T40:~/mcvc$ ls -a d1.txt
+ls: cannot access 'd1.txt': No such file or directory
+student@T40:~/mcvc$ ls -a >redirect.txt
+student@T40:~/mcvc$ cat redirect.txt
+.
+..
+123
+A1.txt
+a2.txt
+A3.txt
+A4.txt
+B1.txt
+B2.txt
+file2.txt
+file3.txt
+file4.txt
+file5.txt
+M
+redirect.txt
+v1.txt
+X
+student@T40:~/mcvc$ wc -l < A1.txt
+5
+student@T40:~/mcvc$ wc -l  A1.txt
+5 A1.txt
+student@T40:~/mcvc$ A1  2>errorfile
+student@T40:~/mcvc$ cat errorfile
+A1: command not found
+student@T40:~/mcvc$ cat A1.txt 1> errorfile.txt
+student@T40:~/mcvc$ cat errorfile
+A1: command not found
+student@T40:~/mcvc$ cat A1.txt
+asdffgh
+welcome
+dfgghfrh
+ghhehe
+dfsfwyhrhr
+student@T40:~/mcvc$ A1.txt 2>error1
+student@T40:~/mcvc$ cat error1
+A1.txt: command not found
+student@T40:~/mcvc$ ls -l | more
+total 72
+drwxr-xr-x 3 student student 4096 Mar 11 12:40 123
+-rw-r--r-- 1 student student   43 Feb 16 11:38 A1.txt
+-rw-r--r-- 1 student student   26 Feb 16 11:58 a2.txt
+-rw-r--r-- 1 student student   43 Feb 16 12:08 A3.txt
+-rw-r--r-- 1 student student   32 Feb 16 12:12 A4.txt
+-rw-r--r-- 1 student student   37 Feb 16 12:15 B1.txt
+-rw-r--r-- 1 student student   15 Feb 16 12:27 B2.txt
+-rw-r--r-- 1 student student   26 Mar 14 14:49 error1
+-rw-r--r-- 1 student student   22 Mar 14 14:46 errorfile
+-rw-r--r-- 1 student student   43 Mar 14 14:48 errorfile.txt
+-rw-r--r-- 1 student student   21 Feb 14 14:27 file2.txt
+-rw-r--r-- 1 student student   15 Feb 14 14:26 file3.txt
+-rw-r--r-- 1 student student   21 Feb 16 11:29 file4.txt
+-rw-r--r-- 1 student student   17 Feb 16 11:30 file5.txt
+drwxr-xr-x 2 student student 4096 Mar 11 11:48 M
+-rw-r--r-- 1 student student  115 Mar 14 14:42 redirect.txt
+-rw-r--r-- 1 student student   17 Mar 11 11:42 v1.txt
+drwxr-xr-x 2 student student 4096 Mar 11 11:59 X
+student@T40:~/mcvc$ cat A1.txt | head -4 | tail -2
+dfgghfrh
+ghhehe
+student@T40:~/mcvc$ cat A1.txt
+asdffgh
+welcome
+dfgghfrh
+ghhehe
+dfsfwyhrhr
+student@T40:~/mcvc$ sort A1.txt| uniq
+asdffgh
+dfgghfrh
+dfsfwyhrhr
+ghhehe
+welcome
+student@T40:~/mcvc$ cat >dd1.txt
+sruthii
+1234556
+56235647647
+cmbdfhjgksvbgfdkj
+dfndsjdgyf
+113425
+^C
+student@T40:~/mcvc$ chmod u=rwx dd1.txt
+student@T40:~/mcvc$ ls -l
+total 76
+drwxr-xr-x 3 student student 4096 Mar 11 12:40 123
+-rw-r--r-- 1 student student   43 Feb 16 11:38 A1.txt
+-rw-r--r-- 1 student student   26 Feb 16 11:58 a2.txt
+-rw-r--r-- 1 student student   43 Feb 16 12:08 A3.txt
+-rw-r--r-- 1 student student   32 Feb 16 12:12 A4.txt
+-rw-r--r-- 1 student student   37 Feb 16 12:15 B1.txt
+-rw-r--r-- 1 student student   15 Feb 16 12:27 B2.txt
+-rwxr--r-- 1 student student   64 Mar 14 15:17 dd1.txt
+-rw-r--r-- 1 student student   26 Mar 14 14:49 error1
+-rw-r--r-- 1 student student   22 Mar 14 14:46 errorfile
+-rw-r--r-- 1 student student   43 Mar 14 14:48 errorfile.txt
+-rw-r--r-- 1 student student   21 Feb 14 14:27 file2.txt
+-rw-r--r-- 1 student student   15 Feb 14 14:26 file3.txt
+-rw-r--r-- 1 student student   21 Feb 16 11:29 file4.txt
+-rw-r--r-- 1 student student   17 Feb 16 11:30 file5.txt
+drwxr-xr-x 2 student student 4096 Mar 11 11:48 M
+-rw-r--r-- 1 student student  115 Mar 14 14:42 redirect.txt
+-rw-r--r-- 1 student student   17 Mar 11 11:42 v1.txt
+drwxr-xr-x 2 student student 4096 Mar 11 11:59 X
+student@T40:~/mcvc$ ls -l dd1.txt
+-rwxr--r-- 1 student student 64 Mar 14 15:17 dd1.txt
+student@T40:~/mcvc$ chmod u=x,g=x,o=x dd1.txt
+student@T40:~/mcvc$ ls -l dd1.txt
+---x--x--x 1 student student 64 Mar 14 15:17 dd1.txt
+student@T40:~/mcvc$ cat dd1.txt
+cat: dd1.txt: Permission denied
+student@T40:~/mcvc$ chmod u=r,g=r,o=r dd1.txt
+student@T40:~/mcvc$ ls -l dd1.txt
+-r--r--r-- 1 student student 64 Mar 14 15:17 dd1.txt
+student@T40:~/mcvc$ chmod 754 dd1.txt
+student@T40:~/mcvc$ ls -l dd1.txt
+-rwxr-xr-- 1 student student 64 Mar 14 15:17 dd1.txt
+student@T40:~/mcvc$ chmod 700 dd1.txt
+student@T40:~/mcvc$ ls -l dd1.txt
+-rwx------ 1 student student 64 Mar 14 15:17 dd1.txt
+student@T40:~/mcvc$ chmod g+w,o+r dd1.txt
+student@T40:~/mcvc$ ls -l dd1.txt
+-rwx-w-r-- 1 student student 64 Mar 14 15:17 dd1.txt
+student@T40:~/mcvc$ 
+

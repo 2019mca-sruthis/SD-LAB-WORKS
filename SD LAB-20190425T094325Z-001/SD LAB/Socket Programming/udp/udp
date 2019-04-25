@@ -1,0 +1,6 @@
+Udp
+student@S16:~$ gedit S.java
+student@S16:~$ javac S.java
+student@S16:~$ java S
+Client:-hiiiii
+
